@@ -34,4 +34,4 @@
 
 ## 主要開發者
 
-[夏特稀](https://github.com/mmm25002500)、[yywbadm](https://github.com/yywbadm)
+[夏特稀](https://github.com/mmm25002500)
