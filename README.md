@@ -1,37 +1,17 @@
-# 靈萌團隊官方網站
-一個使用 vue.js 建立的網站，前後端分離，透過 Github Pages 將網頁伺服器上線。
+# 請勿手動更改此 branch
 
-快速導覽: [修改本專案](#修改本專案) [編譯](#編譯) [運行](#運行) [貢獻](#貢獻) [主要開發者](#主要開發者)
+## 為什麼不能更改
 
-## 修改本專案
-```src/assets/``` => 放置圖片、檔案的地方
+此 branch 需要通過手動編譯，並且 push上傳就會自動跑 CI/CD，請勿手動修改文件，除了 CNAME或其他 github 設定必須文件或 ```.workflow``` 外，其餘請勿修改。
 
-```src/components/``` => 放 vue 元件的地方
+## 如何自動生成
+切換回 [main](https://github.com/Vuage/qian-yue/tree/main)分支，並且通過底下的提示進行編譯，編譯成 ```dist/``` 資料夾後將此資料夾，push 至 [gh_pages](https://github.com/Vuage/qian-yue/tree/gh_pages)分支，Github就會自動部屬網頁。
 
-```src/router/``` => 放 vue 路由表的地方
-
-```src/views/``` => 放 vue 視圖/頁面的地方
-
-```src/App.vue/``` => 總頁面
-
-```public/``` => 放渲染頁面的地方
-
-## 編譯
-
-注意！您必須擁有 npm 及  node.js 才能執行本專案。
-
-安裝所需依賴: ```npm i```
-
-編譯: ```npm run build```
-
-## 運行
-本地開啟: ```npm run serve```
-
-環境變數: 新增 .env的檔案，將必須填入的環境變數填入。
-
-## 貢獻
-您好，如果您想貢獻本專案，您可以先將本專案 fork 至本地，再將源碼下載，修改完成/新增功能後在您的本地上點擊 Pull Requests，將您本地的 repo 發送至上游。我們將誠心查看您所貢獻的程式碼，並適當給予評論，如通過者，將合併本專案，如不通過者，則通知原PR者修改檔案。
-
-## 主要開發者
-
-[夏特稀](https://github.com/mmm25002500)、[yywbadm](https://github.com/yywbadm)
+## 可以修改之文件
+```diff
++ .workflow/ => 可以手動修改
++ CNAME = > 可以手動修改
++ *.yml => 可以手動修改
+- .git/ => 可以交由 git 命令修改
+- .env* => 可以至 settings/secret 修改 (請注意！本檔案不允許上傳至 Github)
+```
