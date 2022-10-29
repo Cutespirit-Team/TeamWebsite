@@ -1,5 +1,21 @@
 [
     {
+        "version": "1.1",
+        "name": "v1.1 正式版",
+        "closed": true,
+        "date": "2022/10/28",
+        "description": "零碎更新",
+        "// 新增誰更新的" : "",
+        "// 更新日誌和指令寫成同一個component": "",
+        "changes": [
+            "更改標題",
+            "解決 Navbar CSS 透明度問題",
+            "解決 card row 問題",
+            "修復開源專案card欄數問題",
+            "新增團隊成員頁面"
+        ]
+    },
+    {
         "version": "1.0",
         "name": "v1.0 正式版",
         "closed": true,

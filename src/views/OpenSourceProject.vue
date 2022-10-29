@@ -12,7 +12,7 @@ export default {
   },
   data () {
     return {
-      row: 'row-cols-md-3',
+      row: '4',
       cacheSearch: '',
       searchData: [],
       data: [
