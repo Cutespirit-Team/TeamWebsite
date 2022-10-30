@@ -11,7 +11,7 @@
           <form class="row justify-content-center">
             <div class="col-md-6">
                 <div class="mb-2">
-                <label for="inputEmail" class="sr-only">Email address</label>
+                <label for="inputEmail" class="sr-only">電子郵件或使用者名稱</label>
                 <input
                     type="email"
                     id="inputEmail"
@@ -23,7 +23,7 @@
                 />
                 </div>
                 <div class="mb-2">
-                <label for="inputPassword" class="sr-only">Password</label>
+                <label for="inputPassword" class="sr-only">密碼</label>
                 <input
                     type="password"
                     id="inputPassword"

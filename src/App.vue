@@ -42,7 +42,7 @@
     <router-view/>
   </div>
   <footer>
-    <p class="copyright">&copy; Copyright 2022. <a :href="cr1_url">{{ cr1 }}</a>. 技術提供: <a :href="cr2_url">{{ cr2 }}</a></p>
+    <p class="copyright">&copy; Copyright 2022. 技術提供: <a :href="cr1_url">{{ cr1 }}</a></p>
   </footer>
   <LoginModal ref="LoginModal"></LoginModal>
   <SignupModal ref="SignupModal"></SignupModal>
@@ -91,10 +91,8 @@ export default {
   },
   data() {
     return {
-      cr1: '淺月物語',
-      cr2: '靈萌團隊',
-      cr1_url: '/',
-      cr2_url: 'https://team.tershi.com',
+      cr1: '靈萌團隊',
+      cr1_url: 'https://team.tershi.com',
       navCacheSearch: '',
       SERVER_CONFIG: config,
       data: [
