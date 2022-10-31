@@ -3,7 +3,11 @@
     <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" ref="noti_toast">
       <div class="toast-header">
         <img :src="require('@/assets/icon.png')" width="20" class="rounded me-2" alt="...">
-        <strong class="me-auto">{{ title }}</strong>
+        <strong class="me-auto">
+          <font-awesome-icon v-if="icon == 'xmark'" :icon="['fas', icon]" class="icon alt text-danger"></font-awesome-icon>
+          <font-awesome-icon v-if="icon == 'triangle-exclamation'" :icon="['fas', icon]" class="icon alt text-warning"></font-awesome-icon>
+          {{ title }}
+        </strong>
         <small>{{ time }}</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
@@ -43,6 +47,9 @@ export default {
     msg: {
       type: String,
       default: '這是一個彈跳視窗.'
+    },
+    icon: {
+      type: String
     }
   }
 }

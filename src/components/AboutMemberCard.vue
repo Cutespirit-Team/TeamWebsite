@@ -1,6 +1,6 @@
 <template>
   <div class="row d-flex" v-if="name">
-    <div class="col col-md-9">
+    <div class="col">
       <div class="card" style="border-radius: 15px;">
         <div class="card-body p-4">
           <div class="d-flex text-black">
@@ -39,7 +39,6 @@
                   <p class="mb-0 text-dark">8.5</p>
                 </div> -->
               </div>
-              <!-- d-flex -->
               <div class="btn-group pt-1 d-grid gap-2">
                 <!-- <button type="button" class="btn btn-outline-primary me-1 flex-grow-1">Chat</button>
                 <button type="button" class="btn btn-primary flex-grow-1">Follow</button> -->
@@ -49,6 +48,7 @@
                 <a type="button" v-if="link.facebook" :href="link.facebook" class="btn btn-primary me-1 flex-grow-1">Facebook</a>
                 <a type="button" v-if="link.instagram" :href="link.instagram" class="btn btn-primary me-1 flex-grow-1">Instagram</a>
               </div>
+              <!-- d-flex -->
             </div>
           </div>
         </div>

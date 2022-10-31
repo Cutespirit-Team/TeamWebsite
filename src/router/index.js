@@ -50,6 +50,18 @@ const routes = [
       {
         path: 'member',
         component: () => import(/* webpackChunkName: "about" */ '../views/AboutTeamMember.vue'),
+      },
+      {
+        path: 'info',
+        component: () => import(/* webpackChunkName: "about" */ '../views/AboutTeamInformation.vue'),
+      },
+      {
+        path: 'link',
+        component: () => import(/* webpackChunkName: "about" */ '../views/AboutTeamLink.vue'),
+      },
+      {
+        path: 'collaborate',
+        component: () => import(/* webpackChunkName: "about" */ '../views/AboutTeamCollaborate.vue'),
       }
     ]
   },

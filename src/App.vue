@@ -19,22 +19,30 @@
               <a class="nav-link" :href="item.url" target="_blank">{{ item.name }}</a>
             </div>
             <div v-else>
-              <router-link class="nav-link" :to="item.url">{{ item.name }}</router-link>
+              <router-link class="nav-link" :to="item.url">
+                <font-awesome-icon :icon="item.icon" class="icon alt" style="color: #ffffff;" />
+                {{ item.name }}
+              </router-link>
             </div>
           </li>
         </ul>
 
         <form class="d-flex me-2">
-          <input class="form-control" type="search" placeholder="搜尋貼文吧(尚未完成)" aria-label="Search" v-model="navCacheSearch">
+          <input class="form-control" type="search" placeholder="來找點樂子吧(尚未完成)" aria-label="Search" v-model="navCacheSearch">
         </form>
-        <button type="button" class="btn btn-outline-success me-2" @click="checkContent()">搜尋</button>
-        <button type="button" class="d-flex btn btn-outline-success me-2" @click="$refs.LoginModal.showModal()">
-          登入
-        </button>
+        <div class="d-flex justify-content-start">
+          <button type="button" class="btn btn-outline-success me-2" @click="checkContent()">
+            <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="icon alt" />
+            搜尋
+          </button>
+          <button type="button" class="d-flex btn btn-outline-success me-2" @click="$refs.LoginModal.showModal()">
+            登入
+          </button>
 
-        <button class="d-flex btn btn-outline-info" @click="$refs.SignupModal.showModal()">
-          註冊
-        </button>
+          <button class="d-flex btn btn-outline-info" @click="$refs.SignupModal.showModal()">
+            註冊
+          </button>
+        </div>
       </div>
     </div>
   </nav>
@@ -46,7 +54,12 @@
   </footer>
   <LoginModal ref="LoginModal"></LoginModal>
   <SignupModal ref="SignupModal"></SignupModal>
-  <Notification ref="Notification" title="搜尋錯誤！" msg="請輸入值" time="現在"></Notification>
+  <Notification
+    ref="Notification"
+    :title="searchNotification.title"
+    :msg="searchNotification.msg"
+    :time="searchNotification.time"
+    :icon="searchNotification.icon"></Notification>
   <!-- <router-link to="/newPage/routerNavigation">/newPage/routerNavigation</router-link> -->
 </template>
 
@@ -95,30 +108,40 @@ export default {
       cr1_url: 'https://team.tershi.com',
       navCacheSearch: '',
       SERVER_CONFIG: config,
+      searchNotification: {
+        title: '搜尋錯誤！',
+        msg: '請輸入值',
+        time: '現在'
+      },
       data: [
         {
           name: '主頁',
           url: '/',
+          icon: ['fas', 'house'],
           outside: false
         },
         {
           name: '貼文',
           url: '/post',
+          icon: ['fas', 'receipt'],
           outside: false
         },
         {
           name: '開源專案',
           url: '/project',
+          icon: ['fas', 'code'],
           outside: false
         },
         {
           name: '關於我們',
           url: '/about',
+          icon: ['fas', 'address-card'],
           outside: false
         },
         {
           name: '加入我們',
           url: '/joinus',
+          icon: ['fas', 'user-plus'],
           outside: false
         },
         // {
@@ -129,11 +152,13 @@ export default {
         {
           name: '更新日誌',
           url: '/webchangelog',
+          icon: ['fas', 'file-invoice'],
           outside: false
         },
         {
           name: '開發者',
           url: '/developer',
+          icon: ['fas', 'terminal'],
           outside: false
         }
       ]
@@ -145,9 +170,22 @@ export default {
     },
     checkContent() {
       if (this.navCacheSearch === '') {
+        this.searchNotification = {
+          title: '搜尋錯誤！',
+          msg: '請輸入值',
+          icon: 'xmark',
+          time: '現在'
+        }
         this.$refs.Notification.showToast()
       } else {
-        this.searchPost()
+        this.searchNotification = {
+          title: '搜尋錯誤！',
+          msg: '功能尚未完成呦~揪咪',
+          icon: 'triangle-exclamation',
+          time: '現在'
+        }
+        this.$refs.Notification.showToast()
+        // this.searchPost()
       }
     }
   }

@@ -1,7 +1,10 @@
 <template>
+  <h1>歡迎來到靈萌團隊團員區</h1>
+  <p>這裡是靈萌團隊團員的一些資訊。</p>
+  <hr>
   <div class="form-floating text-dark">
-    <textarea class="form-control" placeholder="搜尋歷史" id="searchDeveloper" v-model="cacheSearch"></textarea>
-    <label for="searchDeveloper">搜尋歷史</label>
+    <textarea class="form-control" placeholder="搜尋成員" id="searchDeveloper" v-model="cacheSearch"></textarea>
+    <label for="searchDeveloper">搜尋成員</label>
   </div>
   <Card
     v-for="(item, key) in searchData"
