@@ -1,9 +1,13 @@
 <template>
-    <div class="form-floating text-dark">
+    <div class="form-floating text-dark mb-3">
       <textarea class="form-control" placeholder="開始搜尋開發者吧" id="searchDeveloper" v-model="cacheSearch"></textarea>
       <label for="searchDeveloper">搜尋開發者</label>
     </div>
-    <br>
+    <div v-if="!searchData[0]">
+      <div class="alert alert-danger" role="alert">
+        找不到此開發者喔
+      </div>
+    </div>
     <IntroCard :data="searchData" :row="row"></IntroCard>
 </template>
 

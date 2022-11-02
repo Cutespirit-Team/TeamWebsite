@@ -1,5 +1,5 @@
 <template>
-  <div class="form-floating text-dark">
+  <div class="form-floating text-dark mb-3">
     <textarea class="form-control" placeholder="開始搜尋貼文吧" id="searchDeveloper" v-model="cacheSearch"></textarea>
     <label for="searchDeveloper">搜尋貼文</label>
   </div>
@@ -21,6 +21,11 @@
           <button type="button" class="btn btn-primary" @click="showPost(key)">展開</button>
         </div>
       </div>
+    </div>
+  </div>
+  <div v-if="!searchPost[0]">
+    <div class="alert alert-danger" role="alert">
+      找不到貼文喔QAQ
     </div>
   </div>
   <!-- <div v-for="(item, key) in searchPost" :key="key">

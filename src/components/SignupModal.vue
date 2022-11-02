@@ -9,7 +9,42 @@
         </div>
         <div class="modal-body text-dark">
           <form class="row justify-content-center">
-            <div class="col-md-6">
+            <!-- <div class="col-md-6"> -->
+              <div class="input-group mb-3">
+                <!-- <label for="inputPassword">密碼</label> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="姓氏"
+                  aria-label="姓氏"
+                  v-model="lastName"
+                />
+                <span class="input-group-text">@</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="名字"
+                  aria-label="名字"
+                  v-model="firstName"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <!-- <label for="inputPassword">密碼</label> -->
+                <span class="input-group-text">@</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="使用者名稱"
+                  aria-label="使用者名稱"
+                  v-model="username"
+                />
+                <label class="input-group-text" for="inputGroupSelect01">性別</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected :disabled="true">嘿嘿</option>
+                  <option value="man">男森</option>
+                  <option value="girl">女森</option>
+                </select>
+              </div>
                 <div class="mb-2">
                 <label for="inputEmail" >電子郵件</label>
                 <input
@@ -33,7 +68,18 @@
                     v-model="user.password"
                 />
                 </div>
-            </div>
+              <div class="mb-2">
+                <label for="inputPassword">重新輸入密碼</label>
+                <input
+                    type="password"
+                    id="inputPassword"
+                    class="form-control"
+                    placeholder="Password"
+                    required
+                    v-model="user.re_password"
+                />
+              </div>
+            <!-- </div> -->
           </form>
         </div>
         <div class="modal-footer">
@@ -58,8 +104,14 @@ export default {
     return {
       modal: {},
       user: {
+        username: '',
         email: '',
-        password: ''
+        password: '',
+        re_password: '',
+        first_name: '',
+        last_name: '',
+        gender: '',
+        birth: ''
       }
     }
   },

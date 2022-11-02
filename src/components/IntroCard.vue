@@ -1,4 +1,5 @@
 <template>
+  <!-- 把圖片都放在靜態資產(static assets)裡面，以便 vue-use-webp 載入 -->
     <div class="row row-cols-1 g-4 " :class="getRow()">
         <div class="col d-flex justify-content-center" v-for="(item, key) in data" :key="key">
             <div class="card" style="width: 18rem;" v-if="item.name">

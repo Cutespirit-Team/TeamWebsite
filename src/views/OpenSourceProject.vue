@@ -1,6 +1,10 @@
 <template>
-  <input class="form-control" type="search" placeholder="搜尋專案吧" aria-label="Search" v-model="cacheSearch">
-  <br>
+  <input class="form-control mb-3" type="search" placeholder="搜尋專案吧" aria-label="Search" v-model="cacheSearch">
+  <div v-if="!searchData[0]">
+    <div class="alert alert-danger" role="alert">
+      找不到專案喔QQ
+    </div>
+  </div>
   <ProjectCard :data="searchData" :row="row"></ProjectCard>
 </template>
 

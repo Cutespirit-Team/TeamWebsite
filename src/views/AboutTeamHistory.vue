@@ -3,7 +3,7 @@
   <h1>歡迎來到靈萌團隊歷史區</h1>
   <p>這裡會記錄著從靈萌團隊歷史，和前團隊歷史。</p>
   <hr>
-  <div class="form-floating text-dark">
+  <div class="form-floating text-dark mb-3">
     <textarea class="form-control" placeholder="搜尋歷史" id="searchDeveloper" v-model="cacheSearch"></textarea>
     <label for="searchDeveloper">搜尋歷史</label>
   </div>

@@ -14,15 +14,32 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
 
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-          <li class="nav-item" v-for="(item, key) in data" :key="key">
+          <li class="nav-item" v-for="(item, key) in data" :key="key" :class="item.children? 'dropdown':''">
             <div v-if="item.outside">
               <a class="nav-link" :href="item.url" target="_blank">{{ item.name }}</a>
             </div>
             <div v-else>
-              <router-link class="nav-link" :to="item.url">
-                <font-awesome-icon :icon="item.icon" class="icon alt" style="color: #ffffff;" />
-                {{ item.name }}
-              </router-link>
+              <div v-if="item.children">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <font-awesome-icon :icon="item.icon" class="icon alt" style="color: #ffffff;" />
+                    {{ item.name }}
+                </a>
+                <ul class="dropdown-menu" style="background-color: rgb(7 6 6 / 82%) !important;" aria-labelledby="navbarDropdown">
+                  <li v-for="(child, key2) in item.children" :key="key2">
+                    <router-link :to="child.path" class="dropdown-item" href="#">
+                      <font-awesome-icon :icon="child.icon" class="icon alt" style="color: #ffffff;" />
+                      <span style="color: #ffffff;">&nbsp;{{ child.name }}</span>
+                    </router-link>
+                  </li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                </ul>
+              </div>
+              <div v-else>
+                <router-link class="nav-link" :to="item.url">
+                  <font-awesome-icon :icon="item.icon" class="icon alt" style="color: #ffffff;" />
+                  {{ item.name }}
+                </router-link>
+              </div>
             </div>
           </li>
         </ul>
@@ -136,6 +153,38 @@ export default {
           name: '關於我們',
           url: '/about',
           icon: ['fas', 'address-card'],
+          children: [
+            {
+              name: '團隊介紹',
+              icon: ['fas', 'chalkboard-user'],
+              path: '/about/team'
+            },
+            {
+              name: '團隊歷史',
+              icon: ['fas', 'clock-rotate-left'],
+              path: '/about/history'
+            },
+            {
+              name: '團隊成員',
+              icon: ['fas', 'user-group'],
+              path: '/about/member'
+            },
+            {
+              name: '團隊資訊',
+              icon: ['fas', 'circle-info'],
+              path: '/about/info'
+            },
+            {
+              name: '洽談合作',
+              icon: ['fas', 'handshake'],
+              path: '/about/collaborate'
+            },
+            {
+              name: '團隊連結和友情站',
+              icon: ['fas', 'link'],
+              path: '/about/link'
+            }
+          ],
           outside: false
         },
         {

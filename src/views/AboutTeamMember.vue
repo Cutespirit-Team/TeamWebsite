@@ -1,22 +1,37 @@
 <template>
+  <!-- 把圖片都放在靜態資產(static assets)裡面，以便 vue-use-webp 載入 -->
   <h1>歡迎來到靈萌團隊團員區</h1>
   <p>這裡是靈萌團隊團員的一些資訊。</p>
   <hr>
-  <div class="form-floating text-dark">
+  <div class="form-floating text-dark mb-3">
     <textarea class="form-control" placeholder="搜尋成員" id="searchDeveloper" v-model="cacheSearch"></textarea>
     <label for="searchDeveloper">搜尋成員</label>
   </div>
-  <Card
-    v-for="(item, key) in searchData"
-    :key="key"
-    :name="item.name"
-    :role="item.role"
-    :img="item.img"
-    :description="item.description"
-    :short_text="item.short_text"
-    :link="item.link"
-    :experience="item.experience"
-    ></Card>
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group mb-3">
+    <div class="mb-3">
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" @click="change('')" checked>
+      <label class="btn btn-outline-info text-white" for="btnradio2">全部</label>
+    </div>
+    <div v-for="(item, key) in data" :key="key" class="mb-3">
+      <input :href="`#`+item.name" type="radio" class="btn-check" name="btnradio" :id="item.name" autocomplete="off" @click="change(item.name)">
+      <label class="btn btn-outline-info text-white" :for="item.name">{{ item.name }}</label>
+    </div>
+  </div>
+  <!-- <div class="mb-3"> -->
+    <Card
+      v-for="(item, key) in searchData"
+      :key="key"
+      :id="item.name"
+      :name="item.name"
+      :role="item.role"
+      :img="item.img"
+      :description="item.description"
+      :short_text="item.short_text"
+      :link="item.link"
+      :experience="item.experience"
+      class="mb-3"
+      ></Card>
+  <!-- </div> -->
   <div v-if="!searchData[0]">
     <div class="alert alert-danger" role="alert">
       找不到結果喔
@@ -147,6 +162,11 @@ export default {
   },
   created() {
     this.searchData = this.data
+  },
+  methods: {
+    change(name) {
+      this.cacheSearch = name
+    }
   }
 }
 </script>
