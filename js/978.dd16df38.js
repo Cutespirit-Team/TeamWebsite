@@ -1,2 +1,2 @@
 "use strict";(self["webpackChunkteamwebsite"]=self["webpackChunkteamwebsite"]||[]).push([[978],{1978:function(e,n,t){t.r(n),t.d(n,{default:function(){return f}});var u=t(3396);const r=(0,u._)("h1",null,"404",-1),l=(0,u._)("p",null,"這頁找不到囉～",-1);function s(e,n){return(0,u.wg)(),(0,u.iD)(u.HY,null,[r,l],64)}var a=t(89);const c={},i=(0,a.Z)(c,[["render",s]]);var f=i}}]);
-//# sourceMappingURL=978.49efcb2c.js.map
+//# sourceMappingURL=978.dd16df38.js.map
