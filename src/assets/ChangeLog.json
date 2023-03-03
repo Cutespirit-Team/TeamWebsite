@@ -8,7 +8,8 @@
         "// 新增誰更新的" : "",
         "// 更新日誌和指令寫成同一個component": "",
         "changes": [
-            "重寫：使用 react + typescript 重寫"
+            "重寫：使用 react + typescript 重寫",
+            "功能：建立 Navbar"
         ]
     },
     {
