@@ -4,8 +4,10 @@ import changelog from '../config/changeLog.json';
 
 interface Log {
   version: string;
+  name: string;
   date: string;
-  content: string[];
+  description: string;
+  changes: string[];
 }
 
 const ChangeLog = () => {
@@ -64,7 +66,7 @@ const ChangeLog = () => {
             v{item.version} <span className="text-xs align-top">{item.date}</span>
           </a>
           {
-            item.content.map((item2: String, key2: number) => (
+            item.changes.map((item2: String, key2: number) => (
               <li ref={el => animate(key2, el!)} style={{ opacity: 0, transform: 'translate(100px, 30px)' }} key={`li-${key}-${key2}`} >
                 {item2}
               </li>
