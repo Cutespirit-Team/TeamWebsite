@@ -96,10 +96,16 @@ const navbarData: NavItem[] = [
   },
   {
     name: "設定",
-    icon: ["fas", "arrow-up-right-from-square"],
+    icon: ["fas", "gear"],
     path: "/settings",
     type: "page"
-  }
+  },
+  {
+    name: "回到團隊舊網",
+    icon: ["fas", "arrow-up-right-from-square"],
+    path: "https://team-old.tershi.com",
+    type: "page"
+  },
 ];
 
 const Navbar = () => {
@@ -128,7 +134,7 @@ const Navbar = () => {
             {/* 選單開始 */}
             {navbarData.map((item, index) => {
               return (
-                <NavLink onClick={() => setNavbarOpen(!navbarOpen)} className={({ isActive }) => (isActive ? " text-cyan-400 font-bold dark:text-white" : "text-gray-700 dark:text-gray-400")} to={item.path}>
+                <NavLink onClick={() => setNavbarOpen(!navbarOpen)} key={ index } className={({ isActive }) => (isActive ? " text-cyan-400 font-bold dark:text-white" : "text-gray-700 dark:text-gray-400")} to={item.path}>
                   <button className="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                     <FontAwesomeIcon icon={ item.icon } className="pr-2"/>
                     {item.name}
