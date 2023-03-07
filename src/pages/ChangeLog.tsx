@@ -57,7 +57,7 @@ const ChangeLog = () => {
   }
 
   return (
-    <div className="container mx-auto pt-8 pl-5 pr-5 text-black dark:text-white transition-colors duration-100">
+    <div className="container mx-auto pt-8 pl-5 pr-5 text-white transition-colors duration-100">
       <h1 className="text-3xl pb-2">更新日誌</h1>
       <hr className='pb-3' />
       {log.map((item, key: number) => (

@@ -2,7 +2,7 @@
     {
         "version": "1.5",
         "name": "v1.5 正式版",
-        "date": "2023/03/04",
+        "date": "2023/03/07",
         "description": "零碎更新",
         "changes": [
             "重寫：使用 react + typescript 重寫",
@@ -16,7 +16,8 @@
             "Fix: Navbar 暗色模式有誤",
             "Fix: 修復 ChangLog 頁面無法顯示",
             "Fix: 完善 index.html",
-            ""
+            "Fix: page color in dark theme",
+            "功能：Navbar 新增icon"
         ]
     },
     {
