@@ -133,6 +133,7 @@ const Navbar = () => {
                     <FontAwesomeIcon icon={ item.icon } className="pr-2"/>
                     {item.name}
                   </button>
+                  <hr className='sm:hidden border-gray-300 dark:border-gray-500'/>
                 </NavLink>
               )
             })}

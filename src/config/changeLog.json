@@ -17,7 +17,12 @@
             "Fix: 修復 ChangLog 頁面無法顯示",
             "Fix: 完善 index.html",
             "Fix: page color in dark theme",
-            "功能：Navbar 新增icon"
+            "功能：Navbar 新增icon",
+            "功能：新增container",
+            "功能：新增背景",
+            "功能：手機版 Navbar 新增分隔線",
+            "功能：完善 首頁",
+            "Fix: Container color"
         ]
     },
     {
