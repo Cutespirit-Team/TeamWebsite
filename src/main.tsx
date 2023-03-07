@@ -9,14 +9,14 @@ import Footer from "./components/Footer";
 // Pages
 import App from "./App";
 import Home from "./pages/Home";
-// import Web from "./pages/Web";
-// import Tutor from "./pages/Tutor";
-// import Bot from "./pages/Bot";
-// import Server from './pages/Server';
-// import NotFound from "./pages/NotFound";
-// import Product from "./pages/Product";
-// import Settings from "./pages/Settings";
-// import ChangeLog from "./pages/ChangeLog";
+import Post from "./pages/Post";
+import Project from "./pages/Project";
+import About from "./pages/About";
+import Joinus from "./pages/Joinus";
+import ChangeLog from "./pages/ChangeLog";
+import Dev from "./pages/Dev";
+import Settings from "./pages/Settings";
+import NotFound from "./pages/NotFound";
 
 import './index.css'
 
@@ -33,15 +33,14 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/web/test" element={<Web />} />
-        <Route path="/web" element={<Web />} />
-        <Route path="/tutor" element={<Tutor />} />
-        <Route path="/bot" element={<Bot />} />
-        <Route path="/server" element={<Server />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="/post" element={<Post />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/joinus" element={<Joinus />} />
         <Route path="/changes" element={<ChangeLog />} />
-        <Route path="*" element={<NotFound />} /> */}
+        <Route path="/dev" element={<Dev />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -2,64 +2,73 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-const navbarData = [
+interface NavItem {
+  name: string;
+  icon: IconProp;
+  path: string;
+  items?: NavItem[];
+  type: "page" | "dropdown";
+}
+
+const navbarData: NavItem[] = [
   {
     name: "主頁",
-    icon: ['', ''],
+    icon: ["fas", "house"],
     path: "/",
     type: "page"
   },
   {
     name: "貼文",
-    icon: ['', ''],
+    icon: ["fas", "receipt"],
     path: "/post",
     type: "page"
   },
   {
     name: "開源專案",
-    icon: ['', ''],
+    icon: ["fas", "code"],
     path: "/project",
     type: "page"
   },
   {
     name: "關於我們",
-    icon: ['', ''],
+    icon: ["fas", "address-card"],
     path: "/about",
     items: [
       {
         name: "團隊介紹",
-        icon: ['', ''],
+        icon: ["fas", "arrow-up-right-from-square"],
         path: "/about/team",
         type: "page"
       },
       {
         name: "團隊歷史",
-        icon: ['', ''],
+        icon: ["fas", "arrow-up-right-from-square"],
         path: "/about/history",
         type: "page"
       },
       {
         name: "團隊成員",
-        icon: ['', ''],
+        icon: ["fas", "arrow-up-right-from-square"],
         path: "/about/member",
         type: "page"
       },
       {
         name: "團隊資訊",
-        icon: ['', ''],
+        icon: ["fas", "arrow-up-right-from-square"],
         path: "/about/info",
         type: "page"
       },
       {
         name: "洽談合作",
-        icon: ['', ''],
+        icon: ["fas", "arrow-up-right-from-square"],
         path: "/about/cooperation",
         type: "page"
       },
       {
         name: "團隊連結和好友情站",
-        icon: ['', ''],
+        icon: ["fas", "arrow-up-right-from-square"],
         path: "/about/link",
         type: "page"
       }
@@ -68,26 +77,26 @@ const navbarData = [
   },
   {
     name: "加入我們",
-    icon: ['', ''],
+    icon: ["fas", "user-plus"],
     path: "/joinus",
     type: "page"
   },
   {
     name: "更新日誌",
-    icon: ['', ''],
+    icon: ["fas", "file-invoice"],
     path: "/changelog",
     type: "page"
   },
   {
     name: "開發者",
-    icon: ['', ''],
+    icon: ["fas", "terminal"],
     path: "/dev",
     type: "page"
   },
   {
     name: "設定",
-    icon: ['', ''],
-    path: "/setttings",
+    icon: ["fas", "arrow-up-right-from-square"],
+    path: "/settings",
     type: "page"
   }
 ];
@@ -117,14 +126,10 @@ const Navbar = () => {
               return (
                 <NavLink onClick={() => setNavbarOpen(!navbarOpen)} className={({ isActive }) => (isActive ? " text-white" : "text-gray-700 dark:text-gray-400")} to={item.path}>
                   <button className="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                    <FontAwesomeIcon icon={ item.icon } className="pr-2"/>
                     {item.name}
                   </button>
                 </NavLink>
-                // <li key={index} className="flex flex-col items-center justify-center md:flex-row md:items-center">
-                //   <Link onClick={() => setNavbarOpen(false)} to={item.path} className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                //     {item.name}
-                //   </Link>
-                // </li>
               )
             })}
           </ul>

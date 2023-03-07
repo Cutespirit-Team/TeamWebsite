@@ -2,24 +2,24 @@
     {
         "version": "1.5",
         "name": "v1.5 正式版",
-        "closed": true,
         "date": "2023/03/04",
         "description": "零碎更新",
-        "// 新增誰更新的" : "",
-        "// 更新日誌和指令寫成同一個component": "",
         "changes": [
             "重寫：使用 react + typescript 重寫",
-            "功能：建立 Navbar"
+            "功能：建立 Navbar 頁面",
+            "功能：完善 Navbar 頁面",
+            "功能：完善 NotFound 頁面",
+            "功能：完善 更新日誌 頁面",
+            "功能：完善 設定 頁面",
+            "功能：新增暗色模式",
+            "功能：建立設定檔"
         ]
     },
     {
         "version": "1.4",
         "name": "v1.4 正式版",
-        "closed": true,
         "date": "2022/11/02",
         "description": "零碎更新",
-        "// 新增誰更新的" : "",
-        "// 更新日誌和指令寫成同一個component": "",
         "changes": [
             "navbar 關於我們增加 dropdown",
             "新增找不到貼文的提示",
@@ -34,11 +34,8 @@
     {
         "version": "1.3",
         "name": "v1.3 正式版",
-        "closed": true,
         "date": "2022/10/31",
         "description": "大更新",
-        "// 新增誰更新的" : "",
-        "// 更新日誌和指令寫成同一個component": "",
         "changes": [
             "手機板 navbar 按鈕改為同一行",
             "更新團隊成員卡片",
@@ -60,11 +57,8 @@
     {
         "version": "1.2",
         "name": "v1.2 正式版",
-        "closed": true,
         "date": "2022/10/31",
         "description": "大更新",
-        "// 新增誰更新的" : "",
-        "// 更新日誌和指令寫成同一個component": "",
         "changes": [
             "更改更新日誌日期",
             "更改登入註冊語言",
@@ -80,11 +74,8 @@
     {
         "version": "1.1",
         "name": "v1.1 正式版",
-        "closed": true,
         "date": "2022/10/30",
         "description": "零碎更新",
-        "// 新增誰更新的" : "",
-        "// 更新日誌和指令寫成同一個component": "",
         "changes": [
             "更改標題",
             "解決 Navbar CSS 透明度問題",
@@ -96,11 +87,8 @@
     {
         "version": "1.0",
         "name": "v1.0 正式版",
-        "closed": true,
         "date": "2022/10/28",
         "description": "大更新",
-        "// 新增誰更新的" : "",
-        "// 更新日誌和指令寫成同一個component": "",
         "changes": [
             "重新改寫團隊官網",
             "開源專案新增找不到名稱就找描述"
