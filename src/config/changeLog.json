@@ -1,11 +1,11 @@
 [
     {
-        "version": "1.5",
-        "name": "v1.5 正式版",
+        "version": "2.1",
+        "name": "v2.1 正式版",
         "date": "2023/03/07",
         "description": "零碎更新",
         "changes": [
-            "重寫：使用 react + typescript 重寫",
+            "重構：使用 react + typescript 重寫",
             "功能：建立 Navbar 頁面",
             "功能：完善 Navbar 頁面",
             "功能：完善 NotFound 頁面",
