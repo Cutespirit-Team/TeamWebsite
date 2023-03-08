@@ -7,7 +7,9 @@
         "changes": [
             "Fix: 修復GitHub page下404的問題",
             "feat: change bg.jpg to webp",
-            "feat: add reload btn while occuring error"
+            "feat: add reload btn while occuring error",
+            "file: add readme.md",
+            "feat: add about sidebar"
         ]
     },
     {

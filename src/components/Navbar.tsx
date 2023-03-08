@@ -35,7 +35,7 @@ const navbarData: NavItem[] = [
   {
     name: "關於我們",
     icon: ["fas", "address-card"],
-    path: "/about",
+    path: "/about/intro",
     items: [
       {
         name: "團隊介紹",
@@ -113,7 +113,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-100 bg-opacity-75 dark:bg-opacity-50	border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+    <nav className="bg-gray-100 bg-opacity-75 dark:bg-opacity-50 dark:bg-gray-800 border-gray-200 px-2 sm:px-4 py-2.5 rounded">
       <div className=" flex flex-wrap items-center justify-between mx-auto">
         <div className='inline-block'>
           <img src={ Icon } width="40" className='inline-block pr-2'/>
