@@ -1,5 +1,16 @@
 [
     {
+        "version": "2.3",
+        "name": "v2.3 正式版",
+        "date": "2023/03/08",
+        "description": "零碎更新",
+        "changes": [
+            "Fix: 修復GitHub page下404的問題",
+            "feat: change bg.jpg to webp",
+            "feat: add reload btn while occuring error"
+        ]
+    },
+    {
         "version": "2.2",
         "name": "v2.2 正式版",
         "date": "2023/03/07",
@@ -17,7 +28,7 @@
         "date": "2023/03/07",
         "description": "零碎更新",
         "changes": [
-            "重構：使用 react + typescript 重寫",
+            "重寫：使用 react + typescript 重寫",
             "功能：建立 Navbar 頁面",
             "功能：完善 Navbar 頁面",
             "功能：完善 NotFound 頁面",

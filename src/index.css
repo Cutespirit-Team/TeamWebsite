@@ -8,7 +8,7 @@ body {
     linear-gradient(to top,
       rgba(19, 21, 25, 0.5),
       rgba(19, 21, 25, 0.5)),
-    url("/bg.jpg");
+    url("/bg.webp");
   color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;

@@ -14,31 +14,41 @@ interface Repo {
   language: string;
 }
 
-const searchData = () => {
-
+const searchData = (e: any) => {
+  console.log(e.target.value);
 }
 
 const Project = () => {
   const [repoData, setRepoData] = useState<Repo[]>([]);
   const [search, setSearch] = useState('');
+  const [err_msg, setErr_msg] = useState('');
+
+  const getData = () => {
+    try {
+      fetch('https://api.github.com/users/Cutespirit-Team/repos')
+        .then((response) => response.json())
+        .then((data) => {
+          setRepoData(data);
+          }
+        )
+        .catch((error) => {
+          setErr_msg(error);
+        }
+      );
+    } catch (error: any) {
+      setErr_msg(error);
+    }
+  }
 
   useEffect(() => {
-    fetch('https://api.github.com/users/Cutespirit-Team/repos')
-      .then((response) => response.json())
-      .then((data) => {
-        setRepoData(data);
-        }
-      )
-      .catch((error) => {
-        console.log(error);
-      });
+    getData();
   }, []);
 
   return (
     <div className='container mx-auto pt-8 pl-5 pr-5 text-white transition-colors duration-100'>
       {
         repoData.length === 0 ? (
-          <LoadingCard></LoadingCard>
+          <LoadingCard err_msg={err_msg} reload={ () => getData() }></LoadingCard>
         ) : ""
       }
       <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>

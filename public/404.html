@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     
@@ -16,19 +16,13 @@
     <meta property="og:image" content="/favicon.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <title>靈萌團隊官網</title>
-  </head>
-  <body class="overflow-x-hidden m-0 p-0 text-black dark:text-white bg-gray-50 dark:bg-gray-700 transition-colors duration-200">
-    <!-- Github Page 到 / 以外就會回傳 404，將 sessionStorage.redirect 取出來 -->
-	  <script>
-    (function(){
-      let redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
-      history.replaceState(null, null, redirect);
-      }
-    })();
-    </script>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+	<script>
+		sessionStorage.redirect = location.href;
+	</script>
+	<!-- Github Page 到 / 以外就會回傳 404，把網址放入 sessionStorage.redirect -->
+	<meta http-equiv="refresh" content="0;URL='/'"></meta>
+	<link rel="icon" href="/favicon.ico">
+</head>
+<body>
+</body>
 </html>
