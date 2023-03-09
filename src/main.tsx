@@ -22,7 +22,6 @@ import History from './pages/About/History';
 
 import Joinus from "./pages/Joinus";
 import ChangeLog from "./pages/ChangeLog";
-import Dev from "./pages/Dev";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
@@ -53,7 +52,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         </Route>
         <Route path="/joinus" element={<Joinus />} />
         <Route path="/changes" element={<ChangeLog />} />
-        <Route path="/dev" element={<Dev />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

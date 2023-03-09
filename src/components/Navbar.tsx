@@ -89,12 +89,6 @@ const navbarData: NavItem[] = [
     type: "page"
   },
   {
-    name: "開發者",
-    icon: ["fas", "terminal"],
-    path: "/dev",
-    type: "page"
-  },
-  {
     name: "設定",
     icon: ["fas", "gear"],
     path: "/settings",
@@ -113,14 +107,14 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-100 bg-opacity-75 dark:bg-opacity-50 dark:bg-gray-800 border-gray-200 px-2 sm:px-4 py-2.5 rounded">
-      <div className=" flex flex-wrap items-center justify-between mx-auto">
-        <div className='inline-block'>
+    <nav className="sticky top-0 z-50 bg-opacity-75 dark:bg-opacity-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+      <div className="flex flex-wrap items-center justify-between mx-auto">
+        <div className='inline-block z-50'>
           <img src={ Icon } width="40" className='inline-block pr-2'/>
           {/* 標題 */}
           <Link onClick={() => setNavbarOpen(false)}  to="/" className="inline align-middle">
             {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" /> */}
-            <h1 className="self-center text-xl font-semibold whitespace-nowrap dark:text-white inline-block">靈萌團隊</h1>
+            <h1 className="self-center text-xl font-semibold whitespace-nowrap text-white inline-block">靈萌團隊</h1>
 
           </Link>
         </div>
@@ -130,7 +124,7 @@ const Navbar = () => {
           <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
         </button>
         <div className={ "w-full md:block md:w-auto " + (navbarOpen? '' : 'hidden') } id="navbar-default">
-          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white md:bg-opacity-75	 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-2 md:border-cyan-300 md:bg-white md:bg-opacity-75	 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {/* 選單開始 */}
             {navbarData.map((item, index) => {
               return (

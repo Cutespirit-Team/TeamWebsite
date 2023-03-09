@@ -50,7 +50,7 @@ const Card = (props: CardProps) => {
         {/* button */}
         <div className="flex pt-4">
           <a className="text-gray-700 dark:text-gray-400" href={props.html_url}>
-            <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Github</button>
+            <button type="button" className="text-white bg-gray-700 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-900 dark:hover:bg-gray-100 dark:focus:ring-gray-700 dark:border-gray-700">Github</button>
           </a> <br />
           {
             props.homepage === null ? "" : (

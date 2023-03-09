@@ -28,7 +28,8 @@ const Project = () => {
       fetch('https://api.github.com/users/Cutespirit-Team/repos')
         .then((response) => response.json())
         .then((data) => {
-          setRepoData(data);
+          // 排除掉 .github
+          setRepoData(data.slice(1));
           }
         )
         .catch((error) => {
