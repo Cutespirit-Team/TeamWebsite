@@ -4,7 +4,7 @@ import icon from '../assets/icon.png';
 const Home = () => {
   return (
     <div className="container mx-auto pt-8 pl-5 pr-5 text-white transition-colors duration-100">
-      <img src={ icon } width="5%" alt="" />
+      <img src={ icon } width="50px" alt="" />
       <h1 className="text-4xl text-white">歡迎來到靈萌團隊官網</h1>
       <p>一群由台灣學生組成的團隊</p>
       <p>共同為了未來與夢想而打拼，為台灣的資訊安全而奮鬥。</p>

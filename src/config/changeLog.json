@@ -1,5 +1,15 @@
 [
     {
+        "version": "2.4.1",
+        "name": "v2.4.1 測試版",
+        "date": "2023/03/12",
+        "description": "零碎更新",
+        "changes": [
+            "fix: homepage image resize",
+            "fix: GithubCard 統一大小"
+        ]
+    },
+    {
         "version": "2.4",
         "name": "v2.4 正式版",
         "date": "2023/03/09",
