@@ -95,9 +95,15 @@ const navbarData: NavItem[] = [
     type: "page"
   },
   {
-    name: "回到團隊舊網",
+    name: "回到靈萌舊網",
     icon: ["fas", "arrow-up-right-from-square"],
     path: "https://team-old.tershi.com",
+    type: "page"
+  },
+  {
+    name: "幣友科技",
+    icon: ["fas", "arrow-up-right-from-square"],
+    path: "https://bityo.tw",
     type: "page"
   },
 ];

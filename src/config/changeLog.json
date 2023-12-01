@@ -1,5 +1,14 @@
 [
     {
+        "version": "2.4.2",
+        "name": "v2.4.2 測試版",
+        "date": "2023/12/02",
+        "description": "零碎更新",
+        "changes": [
+            "docs: add Bityo announcement"
+        ]
+    },
+    {
         "version": "2.4.1",
         "name": "v2.4.1 測試版",
         "date": "2023/03/12",
